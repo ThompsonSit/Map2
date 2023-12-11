@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HongKong Web GIS</title>
+    <!-- stylesheet -->
+    <link href="Style/style.css" rel="stylesheet" />
+    <!-- fontawesome  -->
+    <script src="Scripts/all.min.js"></script>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <h3>HongKong Web GIS</h3>
+    </nav>
+
+    <!-- left-panel -->
+    <div class="left-panel" id="leftPanel">
+        <h4 class="title"><i class="fa-solid fa-list-ul icon"></i> Layers</h4>
+        <div class="body">
+
+            <div id="layer-controls" class="li div" style="margin-left:20px">
+                <ul>
+                    <li>
+                        <div><input type="checkbox" id="osmCheckbox" checked> OSM</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div><input type="checkbox" id="layer1Checkbox" unchecked> CAT1</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer2Checkbox" unchecked> CAT2</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer3Checkbox" unchecked> OZP_AGR</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer4Checkbox" unchecked> OZP_CA</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer5Checkbox" unchecked> BUILDINGS</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer6Checkbox" unchecked> LOT1</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer7Checkbox" unchecked> LOT2</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer8Checkbox" unchecked> LOT3</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer9Checkbox" unchecked> LOT4</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                    <li>
+                        <div> <input type="checkbox" id="layer10Checkbox" unchecked> LOT5</div>
+                        <div><label class="layer-checkbox"></label></div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <h4 class="title"><i class="fa-solid fa-list-ul icon"></i> Legend</h4>
+        <div class="body">
+            <div class="content" id="legend">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- map -->
+    <div id="map"></div>
+
+
+
+    <!-- loader -->
+    <div class="loading" id="loader">
+        <div class="loader"></div>
+    </div>
+
+
+    <div class="table" id="table">
+        <div class="header"> <span class="icon" id="tableBtn"><i class="fa-solid fa-xmark"></i></span></div>
+        <div id="tableTitle" class="table-title">
+            <span>Info</span>
+        </div>
+        <div class="body">
+            <table id="infoTable">
+            </table>
+        </div>
+    </div>
+
+    <script src="Scripts/map.js"></script>
+</body>
+
+</html>
